@@ -1,167 +1,565 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUTRI TRADE LTD</title>
-</head>
-<body>
-    <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
+
   <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>NUTRI TRADE LTD</title>
-  <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
+
+
+
+  <header class="main-header">
+
+    <div class="header-container">
+
+      <a href="#" class="logo">NUTRI TRADE</a>
+
+      <nav class="nav-menu">
+
+        <a href="#about">О компании</a>
+
+        <a href="#products">Продукты</a>
+
+      </nav>
+
+      <button class="header-cta"
+        onclick="document.getElementById('hero-action').scrollIntoView({behavior: 'smooth'})">Контакты</button>
+
+    </div>
+
+  </header>
+
 
   <main>
 
- <section class="hero">
 
-  <div class="glass-panel">
 
-    <span class="hero-label">
-      NUTRI TRADE LTD
-    </span>
+    <section class="hero">
 
-    <h1>
-      NUTRI TRADE LTD — системный поставщик
-      орехов и семян для розничных сетей
-    </h1>
+      <div class="glass-panel">
 
-    <p class="hero-description">
-      Производство, фасовка и retail-ready поставки.
-      Стабильные спецификации, управляемые партии
-      и дисциплина исполнения для modern retail
-      и оптовых каналов в Болгарии и ЕС.
-    </p>
+        <span class="hero-label">NUTRI TRADE LTD</span>
 
-    <button class="hero-button">
-      Запросить коммерческое предложение
-    </button>
+        <h1>
 
-  </div>
+          NUTRI TRADE LTD — системный поставщик
 
-</section>
+          орехов и семян для розничных сетей
 
-<section class="about">
+        </h1>
 
-  <div class="about-container">
+        <p class="hero-description">
 
-    <span class="section-label">
-      О КОМПАНИИ
-    </span>
+          Производство, фасовка и retail-ready поставки.
 
-    <p class="about-intro">
-      NUTRI TRADE LTD — болгарская B2B-компания,
-      работающая в сегменте nuts & seeds с 2014 года.
-      Мы специализируемся на фасовке, подготовке
-      и поставке орехов и семян в форматах,
-      соответствующих требованиям современных
-      розничных сетей.
-    </p>
+          Стабильные спецификации, управляемые партии
 
-    <p class="about-text">
-      Мы работаем не как спотовый трейдер,
-      а как операционный партнер категории.
-      Наша модель строится на трех принципах:
-    </p>
+          и дисциплина исполнения для modern retail
 
-    <!-- PRINCIPLES -->
+          и оптовых каналов в Болгарии и ЕС.
 
-    <div class="principles">
+        </p>
 
-      <div class="principle">
+        <button id="hero-action" class="hero-button">
 
-        <span class="number">01</span>
+          Запросить коммерческое предложение
 
-        <div class="principle-content">
+        </button>
 
-          <h3>
-            Контроль параметров
-          </h3>
+      </div>
+
+    </section>
+
+
+
+    <section id="about" class="about">
+
+      <div class="about-container">
+
+        <span class="about-label">О КОМПАНИИ</span>
+
+        <h2 class="about-title">
+
+          NUTRI TRADE LTD — болгарская B2B-компания,
+
+          работающая в сегменте nuts & seeds с 2014 года.
+
+        </h2>
+
+
+
+        <div class="about-text">
 
           <p>
-            стабильная спецификация продукта
-            и повторяемость качества.
+
+            Мы специализируемся на фасовке, подготовке
+
+            и поставке орехов и семян в форматах,
+
+            соответствующих требованиям современных
+
+            розничных сетей.
+
+          </p>
+
+          <p>
+
+            Мы работаем не как спотовый трейдер,
+
+            а как операционный партнер категории.
+
+            Наша модель строится на трех принципах:
+
+          </p>
+
+        </div>
+
+
+
+        <div class="principles">
+
+          <div class="principle">
+
+            <span>01</span>
+
+            <div>
+
+              <h3>Контроль параметров</h3>
+
+              <p>стабильная спецификация продукта и повторяемость качества.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <span>02</span>
+
+            <div>
+
+              <h3>Готовность к retail</h3>
+
+              <p>упаковка, маркировка и партия полностью соответствуют требованиям сети.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <span>03</span>
+
+            <div>
+
+              <h3>Предсказуемость поставок</h3>
+
+              <p>планирование объемов и работа с регулярным пополнением.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="about-footer">
+
+          <p>
+
+            Компания ориентирована на долгосрочное
+
+            сотрудничество с розничными операторами,
+
+            дистрибьюторами и корпоративными клиентами,
+
+            которым важна системность и управляемость
+
+            поставщика.
+
+          </p>
+
+          <p>
+
+            Наша цель — не просто поставлять продукт,
+
+            а стать устойчивым поставщиком категории
+
+            nuts & seeds для розничных сетей
+
+            Болгарии и ЕС.
+
           </p>
 
         </div>
 
       </div>
 
-      <div class="principle">
+    </section>
 
-        <span class="number">02</span>
 
-        <div class="principle-content">
 
-          <h3>
-            Готовность к retail
-          </h3>
+    <section id="products" class="about-with-images">
+
+
+      <!-- ЛЕВАЯ КОЛОНКА С КАРТИНКАМИ -->
+
+      <div class="side-gallery left-gallery">
+
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/41/07/f4/4107f4b997346288504368086fe5787e.jpg" alt="Product"></div>
+
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/2b/35/a3/2b35a3c12fa46bfa6d5dc0084721e55c.jpg" alt="Product"></div>
+
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/5d/20/ed/5d20ed44b436d05259170c17de82c818.jpg" alt="Product"></div>
+
+      </div>
+
+
+
+      <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ (БЛОК 3) -->
+
+      <div class="about-container">
+
+
+        <h2 class="about-title">Продукт и стандарты поставки</h2>
+
+
+        <div class="about-text">
 
           <p>
-            упаковка, маркировка и партия полностью
-            соответствуют требованиям сети.
+
+            Мы формируем ассортимент как структурированную категорию, способную закрывать разные ценовые сегменты и
+            сценарии потребления.
+
           </p>
+
+        </div>
+
+
+
+        <div class="principles">
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Орехи</h3>
+
+              <p>Миндаль, кешью, фундук, фисташка, грецкий орех — в стабильной спецификации и согласованных калибрах.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Семена</h3>
+
+              <p>Подсолнечные, тыквенные и другие позиции с высокой круглогодичной оборачиваемостью.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Миксы</h3>
+
+              <p>Классические, премиальные и функциональные комбинации, а также решения под индивидуальные требования
+                сети.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Форматы упаковки</h3>
+
+              <ul class="clean-list icon-dot">
+
+                <li>50–200 г — стандартная полка.</li>
+
+                <li>250–500 г — расширенный потребительский формат.</li>
+
+                <li>500 г – 1 кг — семейные упаковки.</li>
+
+                <li>1–5 кг — HoReCa и оптовые поставки.</li>
+
+              </ul>
+
+              <p class="sub-text">
+
+                Возможна разработка индивидуального веса и структуры упаковки под требования конкретной сети.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Private Label</h3>
+
+              <p class="list-lead">Мы производим продукцию под собственные торговые марки партнеров:</p>
+
+              <ul class="clean-list icon-dash">
+
+                <li>разработка продуктовой матрицы;</li>
+
+                <li>адаптация веса и состава;</li>
+
+                <li>подготовка упаковки по бренд-гайдлайнам;</li>
+
+                <li>регулярные поставки по согласованному графику.</li>
+
+              </ul>
+
+              <p class="footer-statement">
+
+                Private Label рассматривается как стратегическое направление долгосрочного сотрудничества.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Что отличает наш продукт</h3>
+
+              <p class="list-lead">В категории орехов и семян решает не только цена, но и контроль параметров. Мы
+                работаем по фиксированным спецификациям, включая:</p>
+
+              <ul class="clean-list icon-dash">
+
+                <li>калибр и целостность ядра;</li>
+
+                <li>допустимый уровень влажности;</li>
+
+                <li>отсутствие посторонних включений;</li>
+
+                <li>стабильный органолептический профиль;</li>
+
+                <li>корректные весовые допуски при фасовке.</li>
+
+              </ul>
+
+              <p class="sub-text">
+
+                Каждая партия сопровождается маркировкой и идентификацией, что обеспечивает прослеживаемость и
+                соответствие требованиям retail.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="principle">
+
+            <div class="block-body">
+
+              <h3>Форматы поставки</h3>
+
+              <p class="list-lead">Мы работаем в различных форматах, в зависимости от канала продаж:</p>
+
+              <ul class="clean-list icon-dash">
+
+                <li>розничные упаковки для полки;</li>
+
+                <li>увеличенные форматы для семейного потребления;</li>
+
+                <li>оптовые партии для HoReCa и дистрибьюторов.</li>
+
+              </ul>
+
+              <p class="sub-text">
+
+                Упаковка адаптируется под требования клиента — от стандартных решений до индивидуальных форматов.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
 
         </div>
 
       </div>
 
-      <div class="principle">
 
-        <span class="number">03</span>
 
-        <div class="principle-content">
+      <!-- ПРАВАЯ КОЛОНКА С КАРТИНКАМИ -->
 
-          <h3>
-            Предсказуемость поставок
-          </h3>
+      <div class="side-gallery right-gallery">
 
-          <p>
-            планирование объемов и работа
-            с регулярным пополнением.
-          </p>
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/6f/4b/25/6f4b251cf238e83b33476d13d8d8c1b0.jpg" alt="Product"></div>
 
-        </div>
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/94/e7/72/94e7726dc7855d75522d4743e9cf7b90.jpg" alt="Product"></div>
+
+        <div class="side-image-wrapper"><img
+            src="https://i.pinimg.com/736x/4c/29/f6/4c29f63965912426379886164852e07c.jpg" alt="Product"></div>
 
       </div>
 
-    </div>
 
-    <!-- BOTTOM -->
 
-    <div class="about-bottom">
+    </section>
 
-      <p>
-        Компания ориентирована на долгосрочное
-        сотрудничество с розничными операторами,
-        дистрибьюторами и корпоративными клиентами,
-        которым важна системность и управляемость
-        поставщика.
-      </p>
+    <section id="workflow" class="about workflow-section">
 
-      <p>
-        Наша цель — не просто поставлять продукт,
-        а стать устойчивым поставщиком категории
-        nuts & seeds для розничных сетей
-        Болгарии и ЕС.
-      </p>
+      <div class="block-decor decor-left"></div>
+      <div class="block-decor decor-right"></div>
 
-    </div>
+      <div class="about-container">
+        <span class="about-label">Блок 4</span>
+        <h2 class="about-title">Как мы работаем</h2>
 
-  </div>
+        <div class="about-text">
+          <p>
+            Работа с категорией nuts & seeds требует не только качественного продукта, но и четко выстроенного
+            операционного цикла. NUTRI TRADE выстраивает процесс поставки как управляемую систему — от спецификации до
+            регулярного пополнения полки.
+          </p>
+        </div>
 
-</section>
+        <div class="principles">
+
+          <div class="principle">
+            <span>01</span>
+            <div class="block-body">
+              <h3>Анализ запроса и формирование задачи</h3>
+              <p class="list-lead">На первом этапе мы определяем:</p>
+              <ul class="clean-list icon-dash">
+                <li>формат сотрудничества: сеть, дистрибьютор, HoReCa, private label;</li>
+                <li>требуемый ассортимент и объемы;</li>
+                <li>формат упаковки и ценовой сегмент;</li>
+                <li>требования к маркировке и документации.</li>
+              </ul>
+              <p class="sub-text">Если речь идет о retail, мы учитываем планограмму, SKU-архитектуру и сезонность
+                категории.</p>
+            </div>
+          </div>
+
+          <div class="principle">
+            <span>02</span>
+            <div class="block-body">
+              <h3>Спецификация и согласование параметров</h3>
+              <p class="list-lead">Каждая позиция фиксируется в виде согласованной спецификации:</p>
+              <ul class="clean-list icon-dash">
+                <li>калибр и допустимые отклонения;</li>
+                <li>требования к целостности и внешнему виду;</li>
+                <li>весовые допуски при фасовке;</li>
+                <li>срок годности и условия хранения;</li>
+                <li>структура упаковки и маркировки.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="principle">
+            <span>03</span>
+            <div class="block-body">
+              <h3>Подготовка коммерческого предложения</h3>
+              <p>Коммерческое предложение формируется на основе согласованной спецификации, планируемого объема,
+                логистической схемы поставки и условий оплаты. Для сетей дополнительно учитываются промо-планы и
+                возможные пиковые объемы.</p>
+            </div>
+          </div>
+
+          <div class="principle">
+            <span>04</span>
+            <div class="block-body">
+              <h3>Производственная и упаковочная подготовка</h3>
+              <p>Перед запуском регулярных поставок мы подтверждаем стабильность сырьевой базы, резервируем упаковочные
+                материалы, планируем производственную загрузку и формируем график отгрузок. В случае private label
+                проводится отдельное согласование макетов и утверждение образцов.</p>
+            </div>
+          </div>
+
+          <div class="principle">
+            <span>05</span>
+            <div class="block-body">
+              <h3>Регулярные поставки и контроль исполнения</h3>
+              <p>Поставки осуществляются в соответствии с согласованным графиком. Контроль включает проверку
+                соответствия спецификации, корректность маркировки, соблюдение сроков годности и документальное
+                сопровождение.</p>
+            </div>
+          </div>
+
+          <div class="principle">
+            <span>06</span>
+            <div class="block-body">
+              <h3>Сопровождение и развитие сотрудничества</h3>
+              <p>После запуска поставок мы адаптируем ассортимент при необходимости, готовим продукт к промо-периодам и
+                расширяем линейку по результатам продаж. Наша задача — долгосрочное присутствие продукта в категории.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
 </body>
+
 </html>
+
+</main>
+
+
+
 </body>
+
 </html>
