@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -175,6 +175,11 @@ body {
     flex-shrink: 0;
 }
 
+/* Специфическое расширение контейнера для корректной сетки контактов */
+#contacts .about-container {
+    max-width: 1200px;
+}
+
 .about-label {
     display: inline-block;
     margin-bottom: 24px;
@@ -292,7 +297,7 @@ body {
 }
 
 .block-decor {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 320px;
@@ -306,13 +311,13 @@ body {
 .decor-left {
     left: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M-10,50 Q30,200 5,400 T20,700 M5,180 Q40,150 50,200 M12,340 Q45,360 60,300 M7,520 Q50,500 40,580' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='200' r='2' fill='%23ffffff'/%3E%3Ccircle cx='60' cy='300' r='3' fill='%23ffffff'/%3E%3C/svg%3E");
-    background-position: left top;
+    background-position: left center;
 }
 
 .decor-right {
     right: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M110,50 Q70,220 90,420 T75,750 M90,140 Q50,110 40,160 M85,300 Q45,330 35,270 M92,500 Q50,470 55,530' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='160' r='3' fill='%23ffffff'/%3E%3Ccircle cx='55' cy='530' r='2' fill='%23ffffff'/%3E%3C/svg%3E");
-    background-position: right top;
+    background-position: right center;
 }
 
 .block-body {
@@ -376,6 +381,352 @@ body {
     margin-top: 34px;
 }
 
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.advantage-item {
+    width: 100%;
+    padding-bottom: 34px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.advantage-item h3 {
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.advantage-item .clean-list li {
+    font-size: 18px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ==========================================================================
+   БЛОК 6, КОНТАКТЫ, ФОРМА, ТАБЫ И СТИЛИ КОММЕРЧЕСКОГО ФУТЕРА
+   ========================================================================== */
+
+section#contacts.about {
+    padding: 100px 40px;
+}
+
+.contacts-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 70px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.company-name-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.company-reg-info {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.4);
+    margin: -15px 0 0 0;
+}
+
+.contact-details-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-details-item .item-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-details-item .item-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.contact-details-item .item-text a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-details-item .item-text a:hover {
+    color: #ffffff;
+}
+
+.cooperation-tags {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.contact-form-block {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.form-instruction {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 25px 0;
+}
+
+.custom-b2b-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group-full {
+    width: 100%;
+}
+
+.input-group-twin {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.input-group-twin input {
+    width: 50%;
+}
+
+.custom-b2b-form input,
+.custom-b2b-form select,
+.custom-b2b-form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 15px 18px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.custom-b2b-form input:focus,
+.custom-b2b-form select:focus,
+.custom-b2b-form textarea:focus {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.custom-b2b-form select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba%28255,255,255,0.4%29' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+
+.custom-b2b-form select option {
+    background: #111111;
+    color: #ffffff;
+}
+
+.custom-b2b-form textarea {
+    resize: none;
+}
+
+.submit-form-btn {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s ease;
+}
+
+.submit-form-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-privacy-disclaimer {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 10px 0 0 0;
+}
+
+.legal-section {
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legal-tabs-header {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 35px;
+}
+
+.tab-toggle-btn {
+    background: none;
+    border: none;
+    padding: 0 0 14px 0;
+    font-family: inherit;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-toggle-btn.active, .tab-toggle-btn:hover {
+    color: #ffffff;
+}
+
+.tab-toggle-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.legal-tab-content {
+    display: none;
+}
+
+.legal-tab-content.active {
+    display: block;
+}
+
+.legal-article {
+    max-width: 800px;
+    text-align: left;
+}
+
+.legal-article h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.legal-article h4 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 25px 0 10px 0;
+}
+
+.legal-article p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 12px 0;
+}
+
+.site-footer {
+    background: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 0;
+}
+
+.footer-inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-site-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-site-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-site-menu a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-site-menu a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal-links a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+.footer-copyright-text p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+/* ==========================================================================
+   МЕДИА-ЗАПРОСЫ И АДАПТИВНОСТЬ
+   ========================================================================== */
+
 @media (max-width: 1400px) {
     .side-gallery {
         width: 200px;
@@ -393,7 +744,6 @@ body {
 }
 
 @media (max-width: 1100px) {
-
     .side-gallery,
     .block-decor {
         display: none;
@@ -401,6 +751,22 @@ body {
 
     .about-with-images {
         padding: 90px 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacts-main-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .footer-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    .footer-site-menu {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -436,7 +802,9 @@ body {
     }
 
     .about,
-    .about-with-images {
+    .about-with-images,
+    section#contacts.about,
+    .legal-section {
         padding: 60px 20px;
     }
 
@@ -459,6 +827,38 @@ body {
 
     .principle span {
         font-size: 28px;
+    }
+
+    .advantage-item h3 {
+        font-size: 26px;
+    }
+
+    .advantage-item .clean-list li {
+        font-size: 16px;
+    }
+
+    .contact-form-block {
+        padding: 30px 20px;
+    }
+
+    .input-group-twin {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .input-group-twin input {
+        width: 100%;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-legal-links {
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
