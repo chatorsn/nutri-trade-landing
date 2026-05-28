@@ -125,4 +125,43 @@ document.addEventListener('DOMContentLoaded', function () {
       e.target.style.outline = '';
     }
   });
+
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function () {
+      const currentItem = this.parentElement;
+      const isOpen = currentItem.classList.contains('active');
+
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      if (!isOpen) {
+        currentItem.classList.add('active');
+      }
+    });
+  });
+
+  const firstAccordion = document.querySelector('.accordion-item');
+  if (firstAccordion) {
+    firstAccordion.classList.add('active');
+  }
+
+// --- НАДЕЖНОЕ УПРАВЛЕНИЕ КУКИ-БАННЕРОМ НАПРЯМУЮ ---
+  const cookieBanner = document.getElementById('cookie-notice-banner');
+  const acceptBtn = document.getElementById('accept-cookie-btn');
+
+  // Показываем баннер через 1 секунду в любом случае, если кнопка еще не нажата
+  if (cookieBanner) {
+    setTimeout(() => {
+      cookieBanner.style.bottom = '0'; // Выплывает на экран
+    }, 1000);
+  }
+
+  if (acceptBtn && cookieBanner) {
+    acceptBtn.addEventListener('click', function () {
+      cookieBanner.style.bottom = '-150px'; // Прячется обратно под экран
+    });
+  }
 });
