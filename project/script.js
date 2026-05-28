@@ -1,71 +1,89 @@
-// ==========================================
-// 1. НАВИГАЦИЯ И ТАБЫ (ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ)
-// ==========================================
+function toggleLegalTab(event, tabId) {
+  const contents = document.querySelectorAll('.legal-tab-content');
+  contents.forEach(content => content.classList.remove('active'));
 
-function toggleLegalTab(evt, tabId) {
-  const panes = document.querySelectorAll('.legal-tab-content');
   const buttons = document.querySelectorAll('.tab-toggle-btn');
-  panes.forEach(p => p.classList.remove('active'));
-  buttons.forEach(b => b.classList.remove('active'));
+  buttons.forEach(btn => btn.classList.remove('active'));
+
   document.getElementById(tabId).classList.add('active');
-  evt.currentTarget.classList.add('active');
+  event.currentTarget.classList.add('active');
 }
 
 function goToLegalTab(tabId) {
-  const target = document.getElementById('legal-docs');
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
+  const targetSection = document.getElementById('legal-docs');
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' });
   }
-  const index = tabId === 'tab-privacy' ? 0 : 1;
+
+  const contents = document.querySelectorAll('.legal-tab-content');
+  contents.forEach(content => content.classList.remove('active'));
+
   const buttons = document.querySelectorAll('.tab-toggle-btn');
-  if (buttons[index]) {
-    buttons[index].click();
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  const targetContent = document.getElementById(tabId);
+  if (targetContent) {
+    targetContent.classList.add('active');
+  }
+
+  const targetButton = document.querySelector(`[onclick*="${tabId}"]`);
+  if (targetButton) {
+    targetButton.classList.add('active');
   }
 }
 
-// ==========================================
-// 2. ИНТЕРАКТИВ И ВАЛИДАЦИЯ (ЗАПУСКАЕТСЯ ПОСЛЕ ЗАГРУЗКИ DOM)
-// ==========================================
-
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // КНОПКА HERO: Плавный скролл к контактам
-  const heroButton = document.getElementById('hero-action');
-  const contactsSection = document.getElementById('contacts');
-  
-  if (heroButton && contactsSection) {
-    heroButton.addEventListener('click', () => {
-      contactsSection.scrollIntoView({ behavior: 'smooth' });
-    });
+function openLegalModal(type) {
+  const modal = document.getElementById(`modal-${type}`);
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
+}
 
-  // ВАЛИДАЦИЯ ФОРМЫ ОБРАТНОЙ СВЯЗИ
+function closeLegalModal(type) {
+  const modal = document.getElementById(`modal-${type}`);
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+}
+
+window.addEventListener('click', function (e) {
+  const modals = document.querySelectorAll('.legal-modal');
+  modals.forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('b2b-contact-form');
-  if (!form) return; 
+  if (!form) return;
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Блокируем реальную отправку
-
-    const inputs = this.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => input.style.borderColor = '');
-
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
     let isValid = true;
 
-    // 1. Название компании
+    const fieldsToReset = form.querySelectorAll('input, select, textarea');
+    fieldsToReset.forEach(field => {
+      field.style.borderColor = '';
+      field.style.outline = '';
+    });
+
     const companyName = document.getElementById('company_name');
     if (!companyName.value.trim()) {
       companyName.style.borderColor = '#d32f2f';
       isValid = false;
     }
 
-    // 2. Контактное лицо
     const contactPerson = document.getElementById('contact_person');
     if (!contactPerson.value.trim()) {
       contactPerson.style.borderColor = '#d32f2f';
       isValid = false;
     }
 
-    // 3. Email
     const email = document.getElementById('user_email');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
@@ -73,27 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
       isValid = false;
     }
 
-    // 4. Формат сотрудничества
     const cooperation = document.getElementById('cooperation_format');
     if (!cooperation.value) {
       cooperation.style.borderColor = '#d32f2f';
       isValid = false;
     }
 
-    // 5. Сообщение
     const message = document.getElementById('user_message');
     if (!message.value.trim()) {
       message.style.borderColor = '#d32f2f';
       isValid = false;
     }
 
-    // 6. Чекбокс
     const privacy = document.getElementById('privacy_agreement');
     if (!privacy.checked) {
       privacy.style.outline = '2px solid #d32f2f';
       isValid = false;
-    } else {
-      privacy.style.outline = '';
     }
 
     if (isValid) {
@@ -102,17 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
         successMsg.style.display = 'block';
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      this.reset();
+      form.reset();
     }
   });
 
-  // Живой сброс ошибок
   form.addEventListener('input', function (e) {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
       e.target.style.borderColor = '';
-      if (e.target.type === 'checkbox') {
-        e.target.style.outline = '';
-      }
+      e.target.style.outline = '';
     }
   });
 });

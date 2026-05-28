@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -8,13 +8,9 @@
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    background:
-        linear-gradient(rgba(8, 12, 8, 0.65),
-            rgba(8, 12, 8, 0.75)),
-        url("https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg");
+    background: linear-gradient(rgba(8, 12, 8, 0.65), rgba(8, 12, 8, 0.75)), url("https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,7 +171,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Специфическое расширение контейнера для корректной сетки контактов */
 #contacts .about-container {
     max-width: 1200px;
 }
@@ -240,6 +235,58 @@ body {
     font-size: 18px;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.72);
+}
+
+.block-body {
+    width: 100%;
+}
+
+.clean-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.clean-list li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.icon-dot li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.icon-dash li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sub-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.list-lead {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+.footer-statement {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin-top: 15px;
 }
 
 .about-footer {
@@ -316,130 +363,61 @@ body {
 
 .decor-right {
     right: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M110,50 Q70,220 90,420 T75,750 M90,140 Q50,110 40,160 M85,300 Q45,330 35,270 M92,500 Q50,470 55,530' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='160' r='3' fill='%23ffffff'/%3E%3Ccircle cx='55' cy='530' r='2' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 800'%3E%3Cpath d='M110,50 Q70,200 95,400 T80,700 M95,180 Q60,150 50,200 M88,340 Q55,360 40,300 M93,520 Q50,500 60,580' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='200' r='2' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='300' r='3' fill='%23ffffff'/%3E%3C/svg%3E");
     background-position: right center;
 }
 
-.block-body {
-    width: 100%;
-}
-
-.list-lead {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.clean-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 24px;
-}
-
-.clean-list li {
-    font-size: 18px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.72);
-    margin-bottom: 12px;
-    position: relative;
-}
-
-.icon-dot li {
-    padding-left: 20px;
-}
-
-.icon-dot li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.icon-dash li {
-    padding-left: 24px;
-}
-
-.icon-dash li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.about .sub-text {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 24px;
-}
-
-.about .footer-statement {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.76);
-    margin-top: 34px;
+.advantages-section {
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .advantages-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    margin-top: 20px;
 }
 
 .advantage-item {
-    width: 100%;
-    padding-bottom: 34px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .advantage-item h3 {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
-}
-
-.advantage-item .clean-list li {
-    font-size: 18px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.72);
-}
-
-/* ==========================================================================
-   БЛОК 6, КОНТАКТЫ, ФОРМА, ТАБЫ И СТИЛИ КОММЕРЧЕСКОГО ФУТЕРА
-   ========================================================================== */
-
-section#contacts.about {
-    padding: 100px 40px;
 }
 
 .contacts-main-grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 70px;
-    margin-top: 50px;
-    width: 100%;
-    text-align: left;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: flex-start;
+    margin-top: 40px;
 }
 
 .contact-info-block {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .company-name-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .company-reg-info {
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.4);
-    margin: -15px 0 0 0;
+    margin-top: -30px;
 }
 
 .contact-details-item {
@@ -448,164 +426,149 @@ section#contacts.about {
     gap: 8px;
 }
 
-.contact-details-item .item-label {
-    font-size: 11px;
-    font-weight: 600;
+.item-label {
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
 }
 
-.contact-details-item .item-text {
+.item-text {
     font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
 }
 
-.contact-details-item .item-text a {
-    color: rgba(255, 255, 255, 0.8);
+.item-text a {
+    color: white;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: opacity 0.3s ease;
 }
 
-.contact-details-item .item-text a:hover {
-    color: #ffffff;
+.item-text a:hover {
+    opacity: 0.7;
 }
 
 .cooperation-tags {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .contact-form-block {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 20px;
-    padding: 40px;
-    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 50px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .form-instruction {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.5);
-    margin: 0 0 25px 0;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 34px;
 }
 
 .custom-b2b-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
-.input-group-full {
+.input-group-full,
+.input-group-twin {
     width: 100%;
 }
 
 .input-group-twin {
-    display: flex;
-    gap: 16px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.input-group-twin input {
-    width: 50%;
-}
-
-.custom-b2b-form input,
+.custom-b2b-form input[type="text"],
+.custom-b2b-form input[type="email"],
+.custom-b2b-form input[type="tel"],
 .custom-b2b-form select,
 .custom-b2b-form textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
-    padding: 15px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: white;
     font-family: inherit;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s ease;
     outline: none;
-    box-sizing: border-box;
-    transition: all 0.2s ease;
+}
+
+.custom-b2b-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    padding-right: 45px;
 }
 
 .custom-b2b-form input:focus,
 .custom-b2b-form select:focus,
 .custom-b2b-form textarea:focus {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.custom-b2b-form select {
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba%28255,255,255,0.4%29' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-}
-
-.custom-b2b-form select option {
-    background: #111111;
-    color: #ffffff;
-}
-
-.custom-b2b-form textarea {
-    resize: none;
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .submit-form-btn {
     width: 100%;
-    padding: 16px;
-    background: #ffffff;
+    padding: 18px;
+    background: white;
+    color: black;
     border: none;
-    border-radius: 50px;
-    color: #000000;
+    border-radius: 12px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 8px;
-    transition: background 0.2s ease;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .submit-form-btn:hover {
     background: rgba(255, 255, 255, 0.9);
-}
-
-.form-privacy-disclaimer {
-    font-size: 12px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.3);
-    margin: 10px 0 0 0;
+    transform: translateY(-1px);
 }
 
 .legal-section {
-    padding: 80px 40px;
-    background: rgba(255, 255, 255, 0.01);
+    padding: 60px 40px;
+    background: rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .legal-tabs-header {
     display: flex;
-    gap: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    margin-bottom: 35px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
 }
 
 .tab-toggle-btn {
     background: none;
     border: none;
-    padding: 0 0 14px 0;
-    font-family: inherit;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     position: relative;
+    transition: color 0.3s ease;
 }
 
-.tab-toggle-btn.active, .tab-toggle-btn:hover {
-    color: #ffffff;
+.tab-toggle-btn:hover {
+    color: white;
+}
+
+.tab-toggle-btn.active {
+    color: white;
 }
 
 .tab-toggle-btn.active::after {
@@ -615,7 +578,7 @@ section#contacts.about {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #ffffff;
+    background: white;
 }
 
 .legal-tab-content {
@@ -626,56 +589,51 @@ section#contacts.about {
     display: block;
 }
 
-.legal-article {
-    max-width: 800px;
-    text-align: left;
-}
-
 .legal-article h3 {
-    font-size: 24px;
-    color: #ffffff;
-    margin: 0 0 20px 0;
+    font-size: 28px;
+    margin-bottom: 25px;
 }
 
 .legal-article h4 {
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 25px 0 10px 0;
+    font-size: 18px;
+    margin: 25px 0 10px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .legal-article p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.5);
-    margin: 0 0 12px 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
 }
 
 .site-footer {
-    background: #000000;
+    padding: 60px 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 60px 0;
+    background: rgba(8, 12, 8, 0.8);
+    position: relative;
+    z-index: 2;
 }
 
 .footer-inner-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .footer-top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-site-logo {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    color: #ffffff;
+    letter-spacing: 2px;
+    color: white;
     text-decoration: none;
 }
 
@@ -685,14 +643,14 @@ section#contacts.about {
 }
 
 .footer-site-menu a {
-    font-size: 14px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-site-menu a:hover {
-    color: #ffffff;
+    color: white;
 }
 
 .footer-bottom-row {
@@ -700,91 +658,106 @@ section#contacts.about {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-legal-links {
     display: flex;
-    gap: 25px;
+    gap: 24px;
 }
 
 .footer-legal-links a {
-    font-size: 13px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-legal-links a:hover {
-    color: #ffffff;
+    color: white;
 }
 
 .footer-copyright-text p {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.3);
-    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: right;
+    line-height: 1.5;
 }
 
-/* ==========================================================================
-   МЕДИА-ЗАПРОСЫ И АДАПТИВНОСТЬ
-   ========================================================================== */
+.legal-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-@media (max-width: 1400px) {
-    .side-gallery {
-        width: 200px;
-        gap: 20px;
-    }
+.legal-modal-content {
+    background: #121612;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+    color: white;
+}
 
+.legal-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.legal-modal-close:hover {
+    color: white;
+}
+
+.legal-modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.legal-modal-content h3 {
+    font-size: 18px;
+    margin: 25px 0 10px;
+}
+
+.legal-modal-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+}
+
+@media (max-width: 1200px) {
     .about-with-images {
-        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
 
-    .block-decor {
-        width: 220px;
-        opacity: 0.06;
-    }
-}
-
-@media (max-width: 1100px) {
-    .side-gallery,
-    .block-decor {
+    .side-gallery {
         display: none;
     }
 
-    .about-with-images {
-        padding: 90px 40px;
-    }
-}
-
-@media (max-width: 1024px) {
     .contacts-main-grid {
         grid-template-columns: 1fr;
         gap: 50px;
-    }
-    .footer-top-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-    }
-    .footer-site-menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 900px) {
-    .glass-panel {
-        padding: 40px;
-    }
-
-    .glass-panel h1 {
-        font-size: 46px;
-    }
-
-    .hero-description {
-        font-size: 18px;
-    }
-
-    .nav-menu {
-        display: none;
     }
 }
 
@@ -801,40 +774,33 @@ section#contacts.about {
         padding: 0 20px;
     }
 
-    .about,
-    .about-with-images,
-    section#contacts.about,
-    .legal-section {
-        padding: 60px 20px;
+    .nav-menu {
+        display: none;
+    }
+
+    .glass-panel {
+        padding: 32px 24px;
+    }
+
+    .glass-panel h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
     }
 
     .about-title {
-        font-size: 30px;
-    }
-
-    .about-text p,
-    .principle p,
-    .about-footer p,
-    .clean-list li,
-    .about .footer-statement {
-        font-size: 16px;
-    }
-
-    .principle {
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .principle span {
         font-size: 28px;
     }
 
-    .advantage-item h3 {
-        font-size: 26px;
+    .about-text p,
+    .about-footer p {
+        font-size: 16px;
     }
 
-    .advantage-item .clean-list li {
-        font-size: 16px;
+    .advantages-list {
+        grid-template-columns: 1fr;
     }
 
     .contact-form-block {
@@ -842,39 +808,22 @@ section#contacts.about {
     }
 
     .input-group-twin {
-        flex-direction: column;
-        gap: 16px;
+        grid-template-columns: 1fr;
     }
 
-    .input-group-twin input {
-        width: 100%;
-    }
-
+    .footer-top-row,
     .footer-bottom-row {
         flex-direction: column;
-        align-items: flex-start;
         gap: 20px;
+        align-items: flex-start;
     }
 
-    .footer-legal-links {
+    .footer-site-menu {
         flex-direction: column;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 600px) {
-    .glass-panel {
-        padding: 24px;
-        border-radius: 24px;
+        gap: 15px;
     }
 
-    .glass-panel h1 {
-        font-size: 32px;
-        line-height: 1.1;
-    }
-
-    .hero-description {
-        font-size: 15px;
-        line-height: 1.6;
+    .footer-copyright-text p {
+        text-align: left;
     }
 }
