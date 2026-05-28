@@ -515,22 +515,23 @@ body {
 
 .advantages-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
     gap: 40px;
     margin-top: 20px;
 }
 
 .advantage-item {
     background: rgba(255, 255, 255, 0.03);
-    padding: 40px;
+    padding: 40px 24px; 
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .advantage-item h3 {
-    font-size: 24px;
+    font-size: 21px; 
     font-weight: 500;
     margin-bottom: 20px;
+    line-height: 1.3;
 }
 
 .contacts-main-grid {
@@ -747,6 +748,16 @@ body {
     margin-bottom: 15px;
 }
 
+select#cooperation_format,
+select#cooperation_format option {
+    background-color: #161f16;
+    color: #ffffff;
+}
+
+select#cooperation_format:focus {
+    background-color: #161f16;
+    color: #ffffff;
+}
 .site-footer {
     padding: 60px 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
